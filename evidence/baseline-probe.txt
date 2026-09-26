@@ -1,0 +1,14 @@
+O1 {'items_total': 5, 'items_flagged': 4, 'unknown_items': [], 'annotators_low_agreement': ['a1', 'a2', 'a3']}
+   agreement: {'a1': 0.667, 'a2': 0.5, 'a3': 0.5}
+   img_004 1.0 ['box_out_of_bounds', 'unknown_label', 'box_too_small', 'object_missed', 'object_missed']
+   img_002 0.25 ['label_conflict']
+   img_003 0.25 ['object_missed']
+   img_005 0.25 ['not_enough_annotators']
+O2 GET /annotators без ключа: 401
+O3 с тем же ключом: проектов видно 2 | поля разметчика: ['annotator_id', 'display_name', 'email', 'level', 'project_id']
+O4 img_001: [['bad_annotation']]
+O5 {'items_total': 5, 'items_flagged': 4, 'unknown_items': ['img_999'], 'annotators_low_agreement': ['a1', 'a2', 'a3']}
+O6 analyze status: 500
+O7 upload status: 500
+O8 {'items_total': 5, 'items_flagged': 2, 'unknown_items': [], 'annotators_low_agreement': ['a1', 'a2', 'a3']}
+O9 5MB upload: 200
