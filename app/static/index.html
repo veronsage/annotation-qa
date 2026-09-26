@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Annotation QA</title>
+<style>
+  body { font-family: sans-serif; margin: 30px; }
+  table { border-collapse: collapse; margin-top: 10px; }
+  td, th { border: 1px solid #aaa; padding: 4px 8px; }
+</style>
+</head>
+<body>
+<h2>Annotation QA</h2>
+api key: <input id="key" type="password"> project id: <input id="pid"> <button onclick="load()">показать</button>
+<div id="summary"></div>
+<table id="queue"></table>
+<script>
+async function load() {
+  const pid = document.getElementById('pid').value;
+  const key = document.getElementById('key').value;
+  const r = await fetch('/projects/' + pid + '/report', {headers: {'X-API-Key': key}});
+  const rep = await r.json();
+  document.getElementById('summary').innerHTML =
+    '<p>всего: ' + rep.summary.items_total + ', на проверку: ' + rep.summary.items_flagged + '</p>';
+  let html = '<tr><th>item</th><th>risk</th><th>issues</th></tr>';
+  for (const it of rep.review_queue) {
+    html += '<tr><td><a href="/projects/' + pid + '/items/' + it.item_id + '.jpg">' + it.item_id + '</a></td>'
+      + '<td>' + it.risk_score + '</td><td>' + it.issues.map(i => i.type).join('<br>') + '</td></tr>';
+  }
+  document.getElementById('queue').innerHTML = html;
+}
+</script>
+</body>
+</html>

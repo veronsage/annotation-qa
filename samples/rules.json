@@ -1,0 +1,8 @@
+{
+  "allowed_labels": ["car", "truck", "bus", "person"],
+  "min_box_area": 16,
+  "min_annotators_per_item": 2,
+  "iou_threshold": 0.5,
+  "agreement_threshold": 0.66,
+  "annotator_min_agreement": 0.7
+}

@@ -1,0 +1,4 @@
+annotator_id,display_name,email,level
+a1,Annotator One,a1@example.org,senior
+a2,Annotator Two,a2@example.org,junior
+a3,Annotator Three,a3@example.org,middle

@@ -1,0 +1,27 @@
+{
+  "items": [
+    {"item_id": "img_001", "width": 640, "height": 480},
+    {"item_id": "img_002", "width": 640, "height": 480},
+    {"item_id": "img_003", "width": 640, "height": 480},
+    {"item_id": "img_004", "width": 640, "height": 480},
+    {"item_id": "img_005", "width": 640, "height": 480}
+  ],
+  "annotations": [
+    {"item_id": "img_001", "annotator_id": "a1", "objects": [{"label": "car", "bbox": [100, 100, 120, 80]}]},
+    {"item_id": "img_001", "annotator_id": "a2", "objects": [{"label": "car", "bbox": [104, 98, 118, 82]}]},
+    {"item_id": "img_001", "annotator_id": "a3", "objects": [{"label": "car", "bbox": [99, 102, 121, 79]}]},
+
+    {"item_id": "img_002", "annotator_id": "a1", "objects": [{"label": "car", "bbox": [200, 150, 100, 60]}]},
+    {"item_id": "img_002", "annotator_id": "a2", "objects": [{"label": "truck", "bbox": [202, 151, 98, 60]}]},
+    {"item_id": "img_002", "annotator_id": "a3", "objects": [{"label": "bus", "bbox": [199, 149, 101, 62]}]},
+
+    {"item_id": "img_003", "annotator_id": "a1", "objects": [{"label": "person", "bbox": [10, 10, 40, 90]}, {"label": "car", "bbox": [300, 200, 150, 90]}]},
+    {"item_id": "img_003", "annotator_id": "a2", "objects": [{"label": "person", "bbox": [12, 11, 39, 88]}]},
+    {"item_id": "img_003", "annotator_id": "a3", "objects": [{"label": "person", "bbox": [11, 9, 41, 91]}, {"label": "car", "bbox": [302, 199, 149, 92]}]},
+
+    {"item_id": "img_004", "annotator_id": "a1", "objects": [{"label": "car", "bbox": [600, 400, 80, 120]}]},
+    {"item_id": "img_004", "annotator_id": "a2", "objects": [{"label": "cat", "bbox": [50, 50, 2, 2]}]},
+
+    {"item_id": "img_005", "annotator_id": "a1", "objects": [{"label": "person", "bbox": [50, 60, 30, 70]}]}
+  ]
+}
